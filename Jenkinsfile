@@ -13,12 +13,6 @@ pipeline {
       }
     }
 
-    stage('Build') {
-      steps {
-        sh 'docker build -f curriculum-front/Dockerfile .'
-      }
-    }
-
     stage('Log into Dockerhub') {
       environment {
         DOCKERHUB_USER = 'fuze365'
@@ -41,5 +35,9 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    DOCKERHUB_USER = 'Ozone183'
+    DOCKERHUB_PASSWORD = 'Quebec01queue#'
   }
 }
