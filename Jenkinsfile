@@ -35,5 +35,11 @@ pipeline {
       }
     }
 
+    stage('List the username') {
+      steps {
+        sh 'uname'
+      }
+    }
+
   }
 }
