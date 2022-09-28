@@ -20,6 +20,7 @@ pipeline {
       }
       steps {
         sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
+        sh 'uname '
       }
     }
 
